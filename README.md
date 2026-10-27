@@ -7,3 +7,6 @@ npm install -y (cria com todas as opções de configuração confirmada)
 
 Criar package-lock,json
 npm install
+
+Instalar as dependências da biblioteca do framework Express
+npm install express
