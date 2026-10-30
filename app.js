@@ -12,14 +12,18 @@ app.get("/:nome", (requisicao, resposta) => {
   const nomeInformado = requisicao.params.nome.toLocaleLowerCase();
   const pet = pets.find((infoPet) => infoPet.nome === nomeInformado);
 
+  if (pet === undefined) {
+    resposta.status(404).send("Não existe o Pet informado.");
+  }
+
   resposta.send(pet);
 });
 
-app.get("/:tutor", (requisicao, resposta) => {
-  const tutorInformado = requisicao.params.tutor;
-  const tutor = pets.find((infoTutor) => infoTutor.tutor === tutorInformado);
+// app.get("/:tutor", (requisicao, resposta) => {
+//   const tutorInformado = requisicao.params.tutor;
+//   const tutor = pets.find((infoTutor) => infoTutor.tutor === tutorInformado);
 
-  resposta.send(tutor);
-});
+//   resposta.send(tutor);
+// });
 
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
