@@ -1,18 +1,21 @@
 const pets = [
   {
-    nome: "Belinha",
+    id: 1,
+    nome: "belinha",
     tutor: "Ana Maria",
     idade: 8,
     vacinada: false,
   },
   {
-    nome: "Cristal",
+    id: 2,
+    nome: "cristal",
     idade: 5,
     tutor: "Luana Dorizo",
     vacinado: true,
   },
   {
-    nome: "Rex",
+    id: 2,
+    nome: "rex",
     tutor: "Joana Queiroz",
     idade: 2,
     vacinado: true,
