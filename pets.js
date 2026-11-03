@@ -14,7 +14,7 @@ const pets = [
     vacinado: true,
   },
   {
-    id: 2,
+    id: 3,
     nome: "rex",
     tutor: "JoanaQueiroz",
     idade: 2,
