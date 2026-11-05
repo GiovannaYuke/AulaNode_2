@@ -25,6 +25,10 @@ app.put("/:nome", (req, res) => {
   const nomeSelecionado = pets.find((pet) => pet.nome === nomeInformado);
   const campos = Object.keys(req.body);
 
+  if (!nomeSelecionado) {
+    res.status(404).send("Não existe o Pet informado.")
+  };
+
   for (let campo of campos) {
     nomeSelecionado[campo] = req.body[campo];
   }
